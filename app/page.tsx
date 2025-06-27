@@ -1,11 +1,11 @@
 import Link from "next/link";
-import ProductCard from "./components/ProductCard";
 
 export default function Home() {
   return (
     <main>
-      <Link href="/users">Users</Link>
-      <ProductCard />
+      <Link href="/meals">Meals</Link> <br />
+      <Link href="/meals/share">Share Meal</Link> <br />
+      <Link href="/community">Community</Link>
     </main>
   );
 }
