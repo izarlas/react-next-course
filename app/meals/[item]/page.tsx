@@ -1,7 +1,7 @@
 import React from "react";
 
-const MealItem = () => {
-  return <div>MealItem</div>;
+const MealDetails = () => {
+  return <div>Meal Details</div>;
 };
 
-export default MealItem;
+export default MealDetails;
