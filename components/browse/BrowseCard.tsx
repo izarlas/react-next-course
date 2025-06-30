@@ -1,6 +1,5 @@
 import React from "react";
 import { Meal } from "../../shared/types/Meal";
-import Image from "next/image";
 import AddToBasketButton from "../AddToBasketButton";
 import DetailsButton from "../DetailsButton";
 import Link from "next/link";
