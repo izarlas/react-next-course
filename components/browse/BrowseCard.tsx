@@ -7,24 +7,21 @@ import Link from "next/link";
 
 const BrowseCard = ({ meal }: { meal: Meal }) => {
   return (
-    <div className="card shadow-sm">
-      <figure className="w-75 h-75">
-        <Image
-          src={meal.image.url}
+    <div className="card card-xs max-w-75 min-w-75 min-h-75 max-h-75">
+      <figure className="rounded-lg">
+        <img
+          src={meal.imageUrl}
           alt={meal.name}
-          width={meal.image.dimensions.width}
-          height={meal.image.dimensions.height}
+          className="object-cover w-full h-full"
         />
       </figure>
-      <div className="card-body p-1">
-        <h2 className="card-title"> {meal.name}</h2>
+      <div className="card-body">
+        <h2 className="card-title">{meal.name}</h2>
         <p>{meal.description}</p>
         <div className="card-actions flex justify-between">
-          <div>
-            <Link href={`/meals/${meal.mealSlug}`}>
-              <DetailsButton />
-            </Link>
-          </div>
+          <Link href={`/meals/${meal.mealSlug}`}>
+            <DetailsButton />
+          </Link>
           <AddToBasketButton />
         </div>
       </div>

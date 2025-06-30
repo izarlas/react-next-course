@@ -10,13 +10,8 @@ const Meals = () => {
       name: "Burger",
       description: "Beef, tomato, mayo",
       price: 8,
-      image: {
-        url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5aBTucVcZb3vkTQrkmas6eKD83PaXhyatnA&s",
-        dimensions: {
-          width: 1000,
-          height: 1000,
-        },
-      },
+      imageUrl:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5aBTucVcZb3vkTQrkmas6eKD83PaXhyatnA&s",
       mealSlug: "burger",
     },
     {
@@ -24,13 +19,8 @@ const Meals = () => {
       name: "Pizza",
       description: "Mozzarella, tomato, mushrooms",
       price: 10,
-      image: {
-        url: "https://images.pexels.com/photos/6147819/pexels-photo-6147819.jpeg",
-        dimensions: {
-          width: 1000,
-          height: 1000,
-        },
-      },
+      imageUrl:
+        "https://images.pexels.com/photos/6147819/pexels-photo-6147819.jpeg",
       mealSlug: "pizza",
     },
   ];
