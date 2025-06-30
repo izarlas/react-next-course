@@ -5,7 +5,13 @@ import BrowseDisplay from "../../components/browse/BrowseDisplay";
 import { getMeals } from "../../lib/meals";
 
 const Meals = () => {
-  const meals: Meal[] = getMeals();
+  let meals: Meal[] = [];
+
+  try {
+    meals = getMeals();
+  } catch (error) {
+    throw new Error(`Failed to fetch meals: ${(error as Error).message}`);
+  }
 
   return (
     <>
