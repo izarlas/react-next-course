@@ -8,6 +8,7 @@ export interface Meal {
     // Todo remove dimensions and fix it with css flexbox
     dimensions: Dimensions;
   };
+  mealSlug: string;
 }
 
 interface Dimensions {

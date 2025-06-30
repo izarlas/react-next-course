@@ -1,6 +1,6 @@
 import React from "react";
 
-const MealDetails = () => {
+const MealDetails = ({ params }: { params: { mealSlug: string } }) => {
   return <div>Meal Details</div>;
 };
 

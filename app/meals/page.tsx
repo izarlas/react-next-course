@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
-import BrowseCard from "../../components/BrowseCard";
 import { Meal } from "../../shared/types/Meal";
+import BrowseDisplay from "../../components/browse/BrowseDisplay";
 
 const Meals = () => {
   const meals: Meal[] = [
@@ -17,6 +17,7 @@ const Meals = () => {
           height: 1000,
         },
       },
+      mealSlug: "burger",
     },
     {
       id: "2",
@@ -30,6 +31,7 @@ const Meals = () => {
           height: 1000,
         },
       },
+      mealSlug: "pizza",
     },
   ];
 
@@ -39,12 +41,8 @@ const Meals = () => {
         <h1>Browse meals</h1>
         <Link href="meals/share">Share</Link>
       </header>
-      <main className="flex flex-row">
-        {meals.map((meal: Meal) => (
-          <div key={meal.id} className="basis-sm">
-            <BrowseCard meal={meal} />
-          </div>
-        ))}
+      <main>
+        <BrowseDisplay meals={meals} />
       </main>
     </>
   );
