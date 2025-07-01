@@ -4,13 +4,13 @@ import { isMeal, isMealsArray } from "../shared/validation/meal";
 
 const db = sql("./db/meals.db");
 
-export function getMeals(): Meal[] {
+export async function getMeals(): Promise<Meal[]> {
   const meals = db.prepare(`SELECT * FROM meals`).all();
 
   return isMealsArray(meals);
 }
 
-export function getMeal(slug: string): Meal {
+export async function getMeal(slug: string): Promise<Meal> {
   const meal = db.prepare(`SELECT * FROM meals WHERE slug = ?`).get(slug);
 
   return isMeal(meal);
