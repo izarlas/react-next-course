@@ -4,5 +4,5 @@ export interface Meal {
   description: string;
   price: number;
   imageUrl: string;
-  mealSlug: string;
+  slug: string;
 }

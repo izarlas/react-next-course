@@ -1,6 +1,6 @@
 import sql from "better-sqlite3";
 import { Meal } from "../shared/types/Meal";
-import { isMealsArray } from "../shared/validation/meal";
+import { isMeal, isMealsArray } from "../shared/validation/meal";
 
 const db = sql("./db/meals.db");
 
@@ -10,7 +10,11 @@ export function getMeals(): Meal[] {
   return isMealsArray(meals);
 }
 
-export function getMeal() {}
+export function getMeal(slug: string): Meal {
+  const meal = db.prepare(`SELECT * FROM meals WHERE slug = ?`).get(slug);
+
+  return isMeal(meal);
+}
 
 export function createMeal() {}
 

@@ -11,7 +11,7 @@ const initMeals: Meal[] = [
     price: 8,
     imageUrl:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5aBTucVcZb3vkTQrkmas6eKD83PaXhyatnA&s",
-    mealSlug: "burger",
+    slug: "burger",
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const initMeals: Meal[] = [
     price: 10,
     imageUrl:
       "https://images.pexels.com/photos/6147819/pexels-photo-6147819.jpeg",
-    mealSlug: "pizza",
+    slug: "pizza",
   },
 ];
 
@@ -28,7 +28,7 @@ db.prepare(
   `
   CREATE TABLE IF NOT EXISTS meals(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    mealSlug TEXT NOT NULL UNIQUE,
+    slug TEXT NOT NULL UNIQUE,
     name TEXT NOT NULL,
     imageUrl TEXT NOT NULL,
     description TEXT NOT NULL,
@@ -41,7 +41,7 @@ function initMockData() {
   const stmt = db.prepare(`
     INSERT INTO meals VALUES (
       null,
-      @mealSlug,
+      @slug,
       @name,
       @imageUrl,
       @description,

@@ -7,7 +7,7 @@ const mealSchema = z.object({
   description: z.string(),
   price: z.number(),
   imageUrl: z.string(),
-  mealSlug: z.string(),
+  slug: z.string(),
 });
 
 const mealsArraySchema = z.array(mealSchema);
